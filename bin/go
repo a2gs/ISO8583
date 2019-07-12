@@ -1,0 +1,1 @@
+./ISO8583_client -i ../Messages/msg.txt -b ../BitsPlugins/ -s localhost -p 666
