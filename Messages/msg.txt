@@ -1,0 +1,39 @@
+#
+# Criar tags:
+# [[TIME_MMSS]]
+# [[TIME_DDYY]]
+# [[TIME_HHMMSS]]
+#
+# [[RAND_6]]   Rand de 6 digitos (para trace)
+
+
+HEADER=3e3e3e3e
+
+# Message Type Identifier
+# 2 bytes
+# 4 BCD
+MTI=0100
+TYPE=FIXED 4
+FORMAT=EBCDIC
+
+# Primary Account Number (PAN)
+# variable length
+# 1 byte, binary + up to 19 N, 4-bit BCD (unsigned packed); maximum 11 bytes
+2=123456789012345678
+TYPE=LhVAR
+FORMAT=BINARY
+
+# Processing Code
+# fixed length
+# 6 N, 4-bit BCD (unsigned packed); 3 bytes
+3=abcd
+TYPE=FIXED 4
+FORMAT=ASCII
+
+4=567
+TYPE=LxVAR
+FORMAT=EBCDIC
+
+5=telkjsdfjklçdsfljksdfkljsfdljksfldkjlkjfsdljksfdst
+TYPE=LLLdVAR
+FORMAT=EBCDIC
